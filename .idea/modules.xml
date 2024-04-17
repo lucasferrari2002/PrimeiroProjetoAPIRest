@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/primeiro-exemplo.iml" filepath="$PROJECT_DIR$/.idea/primeiro-exemplo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/PrimeiroProjetoAPIRest.iml" filepath="$PROJECT_DIR$/.idea/PrimeiroProjetoAPIRest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/primeiro-exemplo/primeiro-exemplo.iml" filepath="$PROJECT_DIR$/primeiro-exemplo/primeiro-exemplo.iml" />
     </modules>
   </component>
 </project>

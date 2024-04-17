@@ -1,5 +1,6 @@
 package com.aulaudemy.primeiroexemplo.service;
 
+import com.aulaudemy.primeiroexemplo.execption.ProdutoExecption;
 import com.aulaudemy.primeiroexemplo.model.Produto;
 import com.aulaudemy.primeiroexemplo.repository.RepositoryProduto;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +20,7 @@ public class ProdutoService {
     }
     public Optional<Produto> obterPorId(Integer id){
         if(repositoryProduto.obterPorId(id).isEmpty()){
-            throw new InputMismatchException("Id não encontrado: Verifique!");
+            throw new ProdutoExecption("Id não encontrado: Verifique!");
         }
        return repositoryProduto.obterPorId(id);
     }

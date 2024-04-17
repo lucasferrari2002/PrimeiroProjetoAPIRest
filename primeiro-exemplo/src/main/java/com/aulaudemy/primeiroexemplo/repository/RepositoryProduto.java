@@ -1,5 +1,6 @@
 package com.aulaudemy.primeiroexemplo.repository;
 
+import com.aulaudemy.primeiroexemplo.execption.ProdutoExecption;
 import com.aulaudemy.primeiroexemplo.model.Produto;
 import org.springframework.stereotype.Repository;
 
@@ -38,7 +39,7 @@ public class RepositoryProduto {
         Optional<Produto> produtoEncontrado = obterPorId(produto.getId());
 
         if( produtoEncontrado.isEmpty()){
-            throw new InputMismatchException("Produto não encontrado");
+            throw new ProdutoExecption("Produto não encontrado");
 
         }
         deletar(produto.getId());
