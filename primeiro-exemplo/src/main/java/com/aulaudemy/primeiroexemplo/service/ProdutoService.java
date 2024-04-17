@@ -6,7 +6,7 @@ import com.aulaudemy.primeiroexemplo.repository.RepositoryProduto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.InputMismatchException;
+
 import java.util.List;
 import java.util.Optional;
 
@@ -16,24 +16,24 @@ public class ProdutoService {
     private RepositoryProduto repositoryProduto;
 
     public List<Produto> obterTodos(){
-        return repositoryProduto.obterTodos();
+        return repositoryProduto.findAll();
     }
     public Optional<Produto> obterPorId(Integer id){
-        if(repositoryProduto.obterPorId(id).isEmpty()){
+        if(repositoryProduto.findById(id).isEmpty()){
             throw new ProdutoExecption("Id não encontrado: Verifique!");
         }
-       return repositoryProduto.obterPorId(id);
+       return repositoryProduto.findById(id);
     }
     public Produto adicionar(Produto produto){
-        return repositoryProduto.adicionar(produto);
+        return repositoryProduto.save(produto);
     }
     public void deletar (Integer id){
-        repositoryProduto.deletar(id);
+        repositoryProduto.deleteById(id);
 
     }
     public Produto atualizar(Integer id, Produto produto){
        produto.setId(id);
-       return repositoryProduto.atualizar(produto);
+       return repositoryProduto.save(produto);
     }
 
 }
