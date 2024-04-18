@@ -17,6 +17,7 @@ public class Produto {
     private String observacao;
 
     public Produto() {
+
     }
 
     public Produto(Integer id, String nome, Integer quantidade, Double valor, String observacao) {
